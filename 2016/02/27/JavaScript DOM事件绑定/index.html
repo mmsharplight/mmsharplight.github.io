@@ -98,81 +98,84 @@
 
     <!-- Main Content -->
     <!-- Page Header -->
-<!-- Set your background image for this header in the theme's configuration: index_cover -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
 <header class="intro-header" style="background-image: url('http://www.codeblocq.com/assets/projects/hexo-theme-clean-blog/img/home-bg.jpg')">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="site-heading">
-                    <h1>Sharp Light</h1>
-                    <hr class="small">
-                    <span class="subheading">Talk is cheap·Show me the code</span>
+                <div class="post-heading">
+                    <h1>Untitled</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        2016-02-27
+                    </span>
                 </div>
             </div>
         </div>
     </div>
 </header>
 
-<!-- Main Content -->
-<div class="container">
-    <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-            
-                <div class="post-preview">
-    <a href="/2016/04/03/在Eclipse下编译C-程序出现的Launch-failed-Binary-not-found-问题的解决方法/">
-        <h2 class="post-title">
-            在Eclipse下编译C++程序出现的Launch failed.Binary not found.问题的解决方法
-        </h2>
-        
-    </a>
-    <p class="post-meta">
-        <!-- Date and Author -->
-        
-        2016-04-03
-    </p>
-</div>
-<hr>
-            
-                <div class="post-preview">
-    <a href="/2016/04/02/jQuery学习笔记/">
-        <h2 class="post-title">
-            jQuery学习笔记
-        </h2>
-        
-    </a>
-    <p class="post-meta">
-        <!-- Date and Author -->
-        
-        2016-04-02
-    </p>
-</div>
-<hr>
-            
-                <div class="post-preview">
-    <a href="/2016/02/27/JavaScript DOM事件绑定/">
-        <h2 class="post-title">
-            Untitled
-        </h2>
-        
-    </a>
-    <p class="post-meta">
-        <!-- Date and Author -->
-        
-        2016-02-27
-    </p>
-</div>
-<hr>
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+
+            <!-- Gallery -->
             
 
-            <ul class="pager">
-    
-    
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <p>##JavaScript DOM事件绑定<br> tabindex属性：用来当前HTML元素节点是否被tab键遍历，以及遍历的优先级。<br> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var b1 = document.getElementById(&quot;button1&quot;);</span><br><span class="line">b1.tabIndex = 1;</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li>如果 tabindex = -1 ，tab键跳过当前元素。</li>
+<li>如果 tabindex = 0 ，表示tab键将遍历当前元素。如果一个元素没有设置tabindex，默认值就是0。</li>
+<li><p>如果 tabindex 大于0，表示tab键优先遍历。值越大，就表示优先级越大。</p>
+<p>#####this</p>
+</li>
+<li><p>this.style.color=”red”;//this可以操作元素的样式</p>
+</li>
+<li>alert(this.innerText); //this可以获取到元素的值</li>
 </ul>
+<p> #####检测文本框中值的变化</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;input type=&quot;text&quot; id=&quot;username&quot; /&gt;</span><br><span class="line">js:</span><br><span class="line">var input=document.getElementById(&apos;username&apos;);</span><br><span class="line">input.onchange=function(e)&#123;</span><br><span class="line">	  console.log(this.value);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>onmousemove // 鼠标移动到div内时触发事件，只要鼠标在div内就不停触发此事件<br></li>
+<li>onmouseenter //鼠标进入到div时触发事件，只要进入div不出来仅触发一次<br></li>
+<li>onmouseover  //鼠标经过div时触发事件，只要经过div元素及其内部所有元素相互切换时就会触发<br></li>
+<li>onmousedown //在div上鼠标按下触发事件<br></li>
+<li>onmouseup   //在div上鼠标松开触发事件<br></li>
+<li>onmousedown+onmouseup=click<br></li>
+</ul>
+<p>#####获取当前窗口大小</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">window.onresize=function()&#123;</span><br><span class="line">console.log(window.screen.width);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>#####JavaScript绑定事件</p>
+<ul>
+<li><p>传统方式：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">element.onclick = function(e)&#123;</span><br><span class="line">        //...</span><br><span class="line">  &#125;;只能绑定一个处理事件</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">element.addEventListener(&apos;click&apos;,function()e)&#123;</span><br><span class="line">       //...</span><br><span class="line">   &#125;, false);</span><br><span class="line">w3c方式，可以绑定多个事件，旧事件不会被覆盖掉。</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>IE方式：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">element.attachEvent(&apos;onclick&apos;, function()&#123;</span><br><span class="line">       // ...</span><br><span class="line">   &#125;);</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+
+            </div>
+
+            <!-- Comments -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                
+
+
+            </div>
         </div>
     </div>
-</div>
-
-
+</article>
 
     <!-- Footer -->
     <hr />
