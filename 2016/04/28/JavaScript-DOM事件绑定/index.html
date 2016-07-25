@@ -146,7 +146,15 @@
 </ul>
 <p> <b>检测文本框中值的变化</b></p>
  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;input type=&quot;text&quot; id=&quot;username&quot; /&gt;</span><br><span class="line">js:</span><br><span class="line">var input=document.getElementById(&apos;username&apos;);</span><br><span class="line">input.onchange=function(e)&#123;</span><br><span class="line">	  console.log(this.value);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">· onmousemove // 鼠标移动到div内时触发事件，只要鼠标在div内就不停触发此事件&lt;br/&gt;</span><br><span class="line">· onmouseenter //鼠标进入到div时触发事件，只要进入div不出来仅触发一次&lt;br/&gt;</span><br><span class="line">· onmouseover  //鼠标经过div时触发事件，只要经过div元素及其内部所有元素相互切换时就会触发&lt;br/&gt;</span><br><span class="line">· onmousedown //在div上鼠标按下触发事件&lt;br /&gt;</span><br><span class="line">· onmouseup   //在div上鼠标松开触发事件&lt;br /&gt;</span><br><span class="line">· onmousedown+onmouseup=click&lt;br /&gt;</span><br></pre></td></tr></table></figure>
+<p> <b>鼠标事件</b> </p>
+<ul>
+<li>onmousemove // 鼠标移动到div内时触发事件，只要鼠标在div内就不停触发此事件<br></li>
+<li>onmouseenter //鼠标进入到div时触发事件，只要进入div不出来仅触发一次<br></li>
+<li>onmouseover  //鼠标经过div时触发事件，只要经过div元素及其内部所有元素相互切换时就会触发<br></li>
+<li>onmousedown //在div上鼠标按下触发事件<br></li>
+<li>onmouseup   //在div上鼠标松开触发事件<br></li>
+<li>onmousedown+onmouseup=click<br></li>
+</ul>
 <p><b>获取当前窗口大小</b></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">window.onresize=function()&#123;</span><br><span class="line">console.log(window.screen.width);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p><b>JavaScript绑定事件</b></p>
