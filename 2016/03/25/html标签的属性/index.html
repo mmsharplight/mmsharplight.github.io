@@ -136,18 +136,22 @@
                 <font size="6"><b>HTML标签的属性</b></font>
 
 <ul>
-<li><code>lang</code>属性:用来定义当前文档显示的语言。<ul>
-<li>火凤凰辅导书</li>
+<li><p><code>lang</code>属性:用来定义当前文档显示的语言。</p>
+<ul>
+<li><code>lang=&quot;en&quot;</code>表示定义语言为英文。</li>
+<li><code>lang=&quot;zh-CN&quot;</code>表示定义语言为中文。</li>
+<li>这个属性不影响文档语言的显示，但应该遵循标准，这个属性对浏览器和搜索引擎还是有作用的。</li>
+<li>PS.在新的<code>XHTML</code>文档中，<code>lang</code>属性已经被<code>xml:lang</code>属性代替。但是，<code>XHTML</code>规范建议在<code>XHTML 1.0</code>文档的<code>&lt;html&gt;</code>元素中同时使用<code>lang</code>属性和<code>xml:lang</code>属性，以在不同的浏览器之间获得最大的兼容性。</li>
 </ul>
 </li>
 <li><p><code>dir</code>属性:可以指定文本在浏览器中的显示方向。</p>
 <ul>
-<li><p>ltr：文本显示从左到右，默认值。</p>
+<li><p><code>ltr</code>：文本显示从左到右，默认值。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;html dir=&quot;ltr&quot;&gt;//定义从左向右阅读的文档</span><br><span class="line">&lt;html dir=&quot;rtl&quot;&gt;//定义从右向左阅读的文档：</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>rtl：文本显示从右到左。</p>
+<li><p><code>rtl</code>：文本显示从右到左。</p>
 </li>
-<li>auto：让浏览器根据内容来判断文本方向(不推荐使用)。</li>
+<li><code>auto</code>：让浏览器根据内容来判断文本方向(不推荐使用)。</li>
 </ul>
 </li>
 </ul>
