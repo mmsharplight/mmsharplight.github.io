@@ -20,6 +20,8 @@
 
     <!--Open Graph Title-->
     
+        <meta property="og:title" content="用JavaScript实现常用排序算法(四)——冒泡排序"/>
+    
 
     <!--Open Graph Site Name-->
     <meta property="og:site_name" content="Sharp Light"/>
@@ -31,7 +33,7 @@
 
     <!-- Title -->
     
-    <title>归档：2016 - Sharp Light</title>
+    <title>用JavaScript实现常用排序算法(四)——冒泡排序 - Sharp Light</title>
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
@@ -97,128 +99,61 @@
 </nav>
 
     <!-- Main Content -->
-    
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
 
-<!-- Page Header -->
-<!-- Set your background image for this header in the theme's configuration: index_cover -->
 <header class="intro-header" style="background-image: url('http://www.codeblocq.com/assets/projects/hexo-theme-clean-blog/img/home-bg.jpg')">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="site-heading">
-                    <h1>2016</h1>
+                <div class="post-heading">
+                    <h1>用JavaScript实现常用排序算法(四)——冒泡排序</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        2016-06-10
+                    </span>
                 </div>
             </div>
         </div>
     </div>
 </header>
 
-<!-- Main Content -->
-<div class="container">
-    <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+
+            <!-- Gallery -->
             
-                <div class="post-preview">
-    <a href="/2016/06/10/用JavaScript实现常用排序算法(四)——冒泡排序/">
-        <h1 class="post-title archive">
-            用JavaScript实现常用排序算法(四)——冒泡排序
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2016-06-10
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2016/06/01/用JavaScript实现常用排序算法(三)——快速排序/">
-        <h1 class="post-title archive">
-            用JavaScript实现常用排序算法(三)——快速排序
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2016-06-01
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2016/05/18/用JavaScript实现常用排序算法(二)——插入排序/">
-        <h1 class="post-title archive">
-            用JavaScript实现常用排序算法(二)——插入排序
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2016-05-18
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2016/05/07/用JavaScript实现常用排序算法(一)——选择排序/">
-        <h1 class="post-title archive">
-            用JavaScript实现常用排序算法(一)——选择排序
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2016-05-07
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2016/04/28/JavaScript-DOM事件绑定/">
-        <h1 class="post-title archive">
-            JavaScript DOM事件绑定
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2016-04-28
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2016/04/02/jQuery学习笔记/">
-        <h1 class="post-title archive">
-            jQuery学习笔记
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2016-04-02
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2016/03/25/html标签的属性/">
-        <h1 class="post-title archive">
-            html标签的属性
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2016-03-25
-    </p>
-</div>
-            
-            <div class="archive-before-pagination"></div>
-            <ul class="pager">
-    
-    
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <font weight="bold" size="5" face="黑体">用JavaScript实现常用排序算法(四)——冒泡排序</font><br><br><font weight="bold" size="4" face="黑体">原理：</font>
+
+<ul>
+<li>对数组进行遍历，把相邻元素根据大小进行交换</li>
+<li>每次遍历后，将最小值推至最前方，然后对剩下的值再进行比较</li>
 </ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">function BubbleSort(array) &#123;</span><br><span class="line">  var length = array.length;</span><br><span class="line">  for (var i = length - 1; i &gt; 0; i--) &#123; //用于缩小范围</span><br><span class="line">    for (var j = 0; j &lt; i; j++) &#123; //在范围内进行冒泡，在此范围内最大的一个将冒到最后面</span><br><span class="line">      if (array[j] &gt; array[j+1]) &#123; </span><br><span class="line">        var temp = array[j];</span><br><span class="line">        array[j] = array[j+1];</span><br><span class="line">        array[j+1] = temp;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    console.log(array);</span><br><span class="line">    console.log(&quot;-----------------------------&quot;);</span><br><span class="line">  &#125;</span><br><span class="line">  return array;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line">var arr = [10,9,8,7,7,6,5,11,3];</span><br><span class="line">var result = BubbleSort(arr);</span><br><span class="line">console.log(result);</span><br></pre></td></tr></table></figure>
+<font weight="bold" size="3">运算结果与过程：</font>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">[9, 8, 7, 7, 6, 5, 10, 3, 11]</span><br><span class="line">-----------------------------</span><br><span class="line">[8, 7, 7, 6, 5, 9, 3, 10, 11]</span><br><span class="line">-----------------------------</span><br><span class="line">[7, 7, 6, 5, 8, 3, 9, 10, 11]</span><br><span class="line">-----------------------------</span><br><span class="line">[7, 6, 5, 7, 3, 8, 9, 10, 11]</span><br><span class="line">-----------------------------</span><br><span class="line">[6, 5, 7, 3, 7, 8, 9, 10, 11]</span><br><span class="line">-----------------------------</span><br><span class="line">[5, 6, 3, 7, 7, 8, 9, 10, 11]</span><br><span class="line">-----------------------------</span><br><span class="line">[5, 3, 6, 7, 7, 8, 9, 10, 11]</span><br><span class="line">-----------------------------</span><br><span class="line">[3, 5, 6, 7, 7, 8, 9, 10, 11]</span><br><span class="line">-----------------------------</span><br><span class="line">[3, 5, 6, 7, 7, 8, 9, 10, 11]</span><br></pre></td></tr></table></figure>
+            </div>
+
+            <!-- Comments -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                
+
+
+            </div>
         </div>
     </div>
-</div>
-
-
+</article>
 
     <!-- Footer -->
     <hr />
